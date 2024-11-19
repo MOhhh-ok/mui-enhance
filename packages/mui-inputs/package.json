@@ -1,0 +1,29 @@
+{
+    "name": "@masa-dev/mui-inputs",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "prepublishOnly": "pnpm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@tsconfig/node20": "^20.1.4",
+        "@types/react": "^18.3.12"
+    },
+    "peerDependencies": {
+        "@emotion/react": "^11.13.3",
+        "@emotion/styled": "^11.13.0",
+        "@mui/material": "^6.1.7",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "dependencies": {
+        "react-number-format": "^5.4.2"
+    }
+}

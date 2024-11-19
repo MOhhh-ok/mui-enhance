@@ -1,0 +1,5 @@
+dist
+.DS_Store
+.turbo
+.vscode
+node_modules
