@@ -1,5 +1,5 @@
-import { NumberInput } from "./NumberInput";
-import { NumberAllowedRange } from "./types";
+import { NumberInput } from "./NumberInput.js";
+import { NumberAllowedRange } from "./types.js";
 
 
 export function PercentageInput(props: { value: number, onChange: (value: number) => void, allowRange?: NumberAllowedRange }) {

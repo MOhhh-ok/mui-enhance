@@ -1,7 +1,7 @@
 import { TextField } from "@mui/material";
 import { NumericFormat } from "react-number-format";
-import { NumberInputProps } from "./types";
-import { isAllowed } from "./utils";
+import { NumberInputProps } from "./types.js";
+import { isAllowed } from "./utils.js";
 
 export function NumberInput(props: NumberInputProps) {
     const { value, onChange, endText, allowedRange, textFieldProps } = props;

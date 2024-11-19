@@ -1,2 +1,2 @@
-export * from './NumberInput';
-export * from './PercentageInput';
+export * from './NumberInput.js';
+export * from './PercentageInput.js';
