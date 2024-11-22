@@ -1,5 +1,7 @@
 # Mui Enhance
 
+This package enhances MUI.
+
 ## Install
 
 ```
