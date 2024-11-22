@@ -1,6 +1,6 @@
 {
     "name": "@masa-dev/mui-enhance",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "",
     "exports": {
         ".": "./dist/index.js",
@@ -21,7 +21,10 @@
         "dev": "tsc --watch",
         "prepublishOnly": "pnpm run build"
     },
-    "keywords": [],
+    "keywords": [
+        "mui",
+        "mui-enhance"
+    ],
     "author": "",
     "license": "MIT",
     "devDependencies": {
