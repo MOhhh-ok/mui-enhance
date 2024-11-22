@@ -1,8 +1,13 @@
 {
-    "name": "@masa-dev/mui-inputs",
-    "version": "0.1.1",
+    "name": "@masa-dev/mui-enhance",
+    "version": "0.1.0",
     "description": "",
-    "main": "index.js",
+    "exports": {
+        ".": "./dist/index.js",
+        "./client": "./dist/client/index.js",
+        "./client/inputs": "./dist/client/inputs/index.js"
+    },
+    "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "type": "module",
     "publishConfig": {
@@ -31,6 +36,11 @@
         "react-dom": "^18.3.1"
     },
     "dependencies": {
-        "react-number-format": "^5.4.2"
+        "@types/pretty": "^2.0.3",
+        "@types/sanitize-html": "^2.13.0",
+        "dayjs": "^1.11.13",
+        "pretty": "^2.0.0",
+        "react-number-format": "^5.4.2",
+        "sanitize-html": "^2.13.1"
     }
 }

@@ -1,3 +1,14 @@
+# Mui Enhance
+
+## Install
+
+```
+npm i @masa-dev/mui-enhance
+```
+
+## Usage
+
+```tsx
 import { A, H1, H2, H3, H4, H5, H6, HtmlSanitizedContent, P } from '@masa-dev/mui-enhance';
 import { SpanButton } from '@masa-dev/mui-enhance/client';
 import { NumberInput, PercentageInput } from '@masa-dev/mui-enhance/client/inputs';
@@ -66,3 +77,8 @@ function Group(props: { name: string, children: React.ReactNode }) {
         </Stack>
     </Stack>
 }
+```
+
+## License
+
+MIT
