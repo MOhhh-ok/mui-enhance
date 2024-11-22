@@ -2,7 +2,7 @@ import { A, H1, H2, H3, H4, H5, H6, HtmlSanitizedContent, P } from '@masa-dev/mu
 import { SpanButton } from '@masa-dev/mui-enhance/client';
 import { NumberInput, PercentageInput } from '@masa-dev/mui-enhance/client/inputs';
 import { Box, Stack } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function App() {
     return <Stack>
@@ -45,9 +45,9 @@ function HTMLs() {
 }
 
 function Inputs() {
-    const [n, setN] = React.useState(0);
-    const [currency, setCurrency] = React.useState(0);
-    const [percentage, setPercentage] = React.useState(0);
+    const [n, setN] = useState<number | undefined>();
+    const [currency, setCurrency] = useState<number | undefined>();
+    const [percentage, setPercentage] = useState<number | undefined>();
     return <Group name="Inputs">
         {n}
         <NumberInput value={n} onChange={setN} />

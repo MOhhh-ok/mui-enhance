@@ -6,8 +6,8 @@ export type NumberAllowedRange = {
 };
 
 export type NumberInputProps = {
-    value: number;
-    onChange: (value: number) => void;
+    value: number | undefined;
+    onChange: (value: number | undefined) => void;
     endText?: string;
     allowedRange?: NumberAllowedRange;
     textFieldProps?: Omit<TextFieldProps, 'defaultValue' | 'type'>;
