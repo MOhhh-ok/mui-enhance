@@ -13,3 +13,8 @@ export function isAllowed(
         return false;
     return true;
 }
+
+export function anyToNumber(value: number | string | null | undefined) {
+    const result = Number(String(value)?.replace(/,/g, '') ?? 0);
+    return result;
+}

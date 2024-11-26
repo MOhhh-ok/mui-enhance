@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { NumberInput } from "./NumberInput.js";
 import { PercentageInputProps } from "./types.js";
+import { anyToNumber } from "./utils.js";
 
 export const PercentageInput = forwardRef<HTMLInputElement, PercentageInputProps>(
     function PercentageInput(props, ref) {
@@ -33,9 +34,4 @@ function percentageToValue(percentage: number | string | null | undefined) {
 
 function valueToPercentage(value: number | string | null | undefined) {
     return Math.round((anyToNumber(value)) * 10000) / 100;
-}
-
-function anyToNumber(value: number | string | null | undefined) {
-    const result = Number(String(value)?.replace(/,/g, '') ?? 0);
-    return result;
 }
