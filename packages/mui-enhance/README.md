@@ -27,6 +27,7 @@ export default function App() {
         <LinksAndButtons />
         <HTMLs />
         <Inputs />
+        <InputsWithReactHookForm />
     </Stack >
 }
 
@@ -71,6 +72,21 @@ function Inputs() {
         <NumberInput endText='JPY' value={currency} onChange={(v) => setCurrency(v)} />
         {percentage}
         <PercentageInput value={percentage} onChange={(v) => setPercentage(v)} />
+    </Group>
+}
+
+function InputsWithReactHookForm() {
+    const { register, watch } = useForm({ defaultValues: { n: 0, currency: 0, percentage: 0 } });
+    const n = watch('n');
+    const currency = watch('currency');
+    const percentage = watch('percentage');
+    return <Group name="Inputs with React Hook Form">
+        {n}
+        <NumberInput {...register('n')} />
+        {currency}
+        <NumberInput endText='JPY' {...register('currency')} />
+        {percentage}
+        <PercentageInput {...register('percentage')} />
     </Group>
 }
 

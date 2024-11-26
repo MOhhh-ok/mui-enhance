@@ -3,6 +3,7 @@ import { SpanButton } from '@masa-dev/mui-enhance/client';
 import { NumberInput, PercentageInput } from '@masa-dev/mui-enhance/client/inputs';
 import { Box, Stack } from '@mui/material';
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 export default function App() {
     return <Stack>
@@ -11,6 +12,7 @@ export default function App() {
         <LinksAndButtons />
         <HTMLs />
         <Inputs />
+        <InputsWithReactHookForm />
     </Stack >
 }
 
@@ -50,11 +52,26 @@ function Inputs() {
     const [percentage, setPercentage] = useState<number | undefined>();
     return <Group name="Inputs">
         {n}
-        <NumberInput value={n} onChange={setN} />
+        <NumberInput value={n} onValueChange={values => setN(values.floatValue)} />
         {currency}
-        <NumberInput endText='JPY' value={currency} onChange={(v) => setCurrency(v)} />
+        <NumberInput endText='JPY' value={currency} onValueChange={values => setCurrency(values.floatValue)} />
         {percentage}
-        <PercentageInput value={percentage} onChange={(v) => setPercentage(v)} />
+        <PercentageInput value={percentage} onValueChange={values => setPercentage(values.floatValue)} />
+    </Group>
+}
+
+function InputsWithReactHookForm() {
+    const { register, watch } = useForm({ defaultValues: { n: 0, currency: 0, percentage: 0 } });
+    const n = watch('n');
+    const currency = watch('currency');
+    const percentage = watch('percentage');
+    return <Group name="Inputs with React Hook Form">
+        {n}
+        <NumberInput {...register('n')} />
+        {currency}
+        <NumberInput endText='JPY' {...register('currency')} />
+        {percentage}
+        <PercentageInput {...register('percentage')} />
     </Group>
 }
 

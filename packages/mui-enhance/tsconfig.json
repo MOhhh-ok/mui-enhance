@@ -9,5 +9,7 @@
             "ESNext",
             "DOM"
         ],
+        "module": "ESNext",
+        "moduleResolution": "Bundler"
     },
 }
